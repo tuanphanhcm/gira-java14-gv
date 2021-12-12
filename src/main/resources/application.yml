@@ -22,7 +22,7 @@ spring:
       fail-on-empty-beans: false
       
   flyway:
-    url: jdbc:postgresql://localhost:5432/gira
+    url: jdbc:postgresql://localhost:5432/gira&ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory
     user: postgres
     password: admin
     driver-class-name: org.postgresql.Driver
