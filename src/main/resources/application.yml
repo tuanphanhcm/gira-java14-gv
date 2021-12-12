@@ -1,18 +1,35 @@
 ## Datasource
 spring:
+
+    
+  security:
+    user:
+      name: admin
+      password: 1234
+      
   datasource:
     url: jdbc:postgresql://localhost:5432/gira
     username: postgres
     password: admin
+    
   jpa:
     show-sql: true
     hibernate:
       ddl-auto: validate
+      
   jackson:
     serialization:
       fail-on-empty-beans: false
+      
   flyway:
     url: jdbc:postgresql://localhost:5432/gira
     user: postgres
     password: admin
     driver-class-name: org.postgresql.Driver
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    url: /swagger-ui.html
+  packages-to-scan:
+  - cybersoft.javabackend.girajava14gv
