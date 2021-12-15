@@ -31,3 +31,8 @@ springdoc:
     path: /swagger-ui.html
   packages-to-scan:
   - cybersoft.javabackend.girajava14gv
+  
+api:
+  role:
+    name: role controller
+    description: role endpoints
