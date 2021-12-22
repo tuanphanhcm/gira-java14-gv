@@ -23,5 +23,13 @@ public class RoleServiceImpl implements RoleService {
 		
 		return RoleConverter.toRoleDTOs(roles);
 	}
+
+	public RoleDTO create(RoleDTO dto) {
+		Role role = RoleConverter.toRole(dto);
+		
+		Role createdRole = repository.save(role);
+		
+		return RoleConverter.toRoleDTO(createdRole);
+	}
 	
 }

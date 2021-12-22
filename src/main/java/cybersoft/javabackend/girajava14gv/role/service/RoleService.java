@@ -8,4 +8,6 @@ public interface RoleService {
 
 	List<RoleDTO> findAllDTO();
 
+	RoleDTO create(RoleDTO dto);
+
 }

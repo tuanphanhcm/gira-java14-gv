@@ -30,6 +30,8 @@ CREATE TABLE IF NOT EXISTS gira_role_group_role(
 	primary key(role_id, group_role_id)
 );
 
+CREATE sequence hibernate_sequence start 1 increment 1;
+
 ALTER TABLE gira_role_group_role
 ADD CONSTRAINT fk_role 
 	FOREIGN KEY (role_id) REFERENCES gira_role(id);

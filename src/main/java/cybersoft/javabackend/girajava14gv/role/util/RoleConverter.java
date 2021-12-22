@@ -11,6 +11,7 @@ public class RoleConverter {
 		return RoleDTO.builder()
 			.id(role.getId())
 			.name(role.getName())
+			.code(role.getCode())
 			.description(role.getDescription())
 			.build();
 	}
@@ -23,5 +24,13 @@ public class RoleConverter {
 		}
 		
 		return roleDTOs;
+	}
+
+	public static Role toRole(RoleDTO dto) {
+		return Role.builder()
+				.name(dto.getName())
+				.code(dto.getCode())
+				.description(dto.getDescription())
+				.build();
 	}
 }
