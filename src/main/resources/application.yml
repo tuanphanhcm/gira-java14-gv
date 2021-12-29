@@ -1,7 +1,6 @@
 ## Datasource
 spring:
 
-    
   security:
     user:
       name: admin
