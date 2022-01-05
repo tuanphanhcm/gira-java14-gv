@@ -1,5 +1,6 @@
 package cybersoft.javabackend.girajava14gv.common.model;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 import javax.annotation.Generated;
@@ -26,7 +27,7 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 @NoArgsConstructor
 @MappedSuperclass
-public class BaseEntity {
+public class BaseEntity implements Serializable{
 	
 	@Id
 	@GeneratedValue
