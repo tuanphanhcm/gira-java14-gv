@@ -30,7 +30,13 @@ springdoc:
     path: /swagger-ui.html
   packages-to-scan:
   - cybersoft.javabackend.girajava14gv
-  
+
+gira:
+  security:
+    jwt:
+      expiration: 86400000
+      secret: thisismysecret
+
 api:
   role:
     name: role controller
