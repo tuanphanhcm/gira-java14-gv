@@ -18,10 +18,10 @@ public class GlobalExceptionHandler {
 				, HttpStatus.NOT_FOUND);
 	}
 	
-	@ExceptionHandler(value = {Exception.class})
-	public Object handleUnexpectedException(Exception e) {
-		
-		return ResponseHandler.getErrorResponse(e.getMessage()
-				, HttpStatus.BAD_REQUEST);
-	}
+//	@ExceptionHandler(value = {Exception.class})
+//	public Object handleUnexpectedException(Exception e) {
+//		
+//		return ResponseHandler.getErrorResponse(e.getMessage()
+//				, HttpStatus.BAD_REQUEST);
+//	}
 }
