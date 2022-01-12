@@ -11,15 +11,6 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 
 public interface AuthController {
-	@Operation(method = "post", description = "generate fake token")
-	@ApiResponses({
-			@ApiResponse(responseCode = "200", description = "generated token successfully"),
-			@ApiResponse(responseCode = "403", description = "do not have the correct authorization")
-	})
-	@PostMapping(value = "/api/fake-token", produces = "application/json")
-	public ResponseEntity<Object> createTemporaryToken(
-			@RequestParam(value = "username", defaultValue = "tuandeptrai") String username);
-	
 	@Operation(method = "post", description = "verify fake token")
 	@ApiResponses({
 			@ApiResponse(responseCode = "200", description = "verify token successfully"),

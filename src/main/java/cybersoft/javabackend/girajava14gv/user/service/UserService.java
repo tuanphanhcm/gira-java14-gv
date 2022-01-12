@@ -8,5 +8,5 @@ import cybersoft.javabackend.girajava14gv.user.model.User;
 public interface UserService {
 	User getUserById(long id);
 
-	CreateUserDTO create(@Valid CreateUserDTO dto);
+	CreateUserDTO create(CreateUserDTO dto);
 }
