@@ -9,7 +9,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RestController;
 
 import cybersoft.javabackend.girajava14gv.common.ResponseHandler;
-import cybersoft.javabackend.girajava14gv.role.dto.RoleDTO;
 import cybersoft.javabackend.girajava14gv.user.dto.CreateUserDTO;
 import cybersoft.javabackend.girajava14gv.user.service.UserService;
 
