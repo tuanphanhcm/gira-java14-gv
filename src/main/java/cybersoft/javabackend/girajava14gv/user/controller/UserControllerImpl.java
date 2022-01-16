@@ -24,7 +24,7 @@ public class UserControllerImpl implements UserController {
 	}
 
 	@Override
-	public ResponseEntity<Object> createRole(@Valid CreateUserDTO dto, BindingResult bindingResult) {
+	public ResponseEntity<Object> createUser(@Valid CreateUserDTO dto, BindingResult bindingResult) {
 		if (bindingResult.hasErrors()) {
 			return ResponseHandler.getErrorResponse(bindingResult, HttpStatus.BAD_REQUEST);
 		}
