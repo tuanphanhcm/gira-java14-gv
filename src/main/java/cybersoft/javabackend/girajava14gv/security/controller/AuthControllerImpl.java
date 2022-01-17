@@ -11,12 +11,16 @@ import org.springframework.web.bind.annotation.RestController;
 import cybersoft.javabackend.girajava14gv.common.ResponseHandler;
 import cybersoft.javabackend.girajava14gv.security.dto.LoginDTO;
 import cybersoft.javabackend.girajava14gv.security.jwt.JwtUtils;
+import cybersoft.javabackend.girajava14gv.security.service.AuthService;
 
 @RestController
 public class AuthControllerImpl implements AuthController {
 	
 	@Autowired
 	private JwtUtils jwtUtils;
+	
+	@Autowired 
+	private AuthService service;
 
 	@Override
 	public ResponseEntity<Object> login(@Valid LoginDTO dto, BindingResult bindingResult) {
@@ -24,7 +28,9 @@ public class AuthControllerImpl implements AuthController {
 			return ResponseHandler.getErrorResponse(bindingResult, HttpStatus.BAD_REQUEST);
 		}
 		
-		return null;
+		String token = service.login(dto);
+		
+		return ResponseHandler.getResponse(token, HttpStatus.OK);
 	}
 
 }
