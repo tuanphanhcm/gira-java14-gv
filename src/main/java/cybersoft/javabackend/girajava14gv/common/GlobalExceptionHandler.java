@@ -4,6 +4,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import cybersoft.javabackend.girajava14gv.common.exception.GiraRuntimeException;
 import cybersoft.javabackend.girajava14gv.common.exception.NotFoundException;
 import lombok.extern.slf4j.Slf4j;
 
@@ -24,4 +25,11 @@ public class GlobalExceptionHandler {
 //		return ResponseHandler.getErrorResponse(e.getMessage()
 //				, HttpStatus.BAD_REQUEST);
 //	}
+	
+	@ExceptionHandler(value = {GiraRuntimeException.class})
+	public Object handleGiraRuntimeException(GiraRuntimeException e) {
+		log.debug("GiraRuntimeException: {}", e.getMessage());
+		
+		return ResponseHandler.getErrorResponse(e.getMessage(), HttpStatus.BAD_REQUEST);
+	}
 }

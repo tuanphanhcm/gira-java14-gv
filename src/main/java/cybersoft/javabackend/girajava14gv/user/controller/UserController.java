@@ -32,7 +32,7 @@ public interface UserController {
 		@ApiResponse(responseCode = "200", description = "created role successfully")
 	})
 	@PostMapping(value = "/api/users")
-	public ResponseEntity<Object> createRole(
+	public ResponseEntity<Object> createUser(
 			@Parameter(description = "user dto") @Valid @RequestBody CreateUserDTO dto,
 				BindingResult bindingResult
 			);
