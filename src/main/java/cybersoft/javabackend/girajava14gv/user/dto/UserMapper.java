@@ -7,7 +7,6 @@ import cybersoft.javabackend.girajava14gv.user.model.User;
 
 @Mapper
 public interface UserMapper {
-	
 	UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
 	
 	User createUserDtoToUserEntity(CreateUserDTO dto);

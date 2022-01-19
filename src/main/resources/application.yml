@@ -23,6 +23,7 @@ spring:
   flyway:
     enabled: true
     driver-class-name: org.postgresql.Driver
+    
 springdoc:
   api-docs:
     path: /openapi/v3/api-docs
@@ -30,7 +31,7 @@ springdoc:
     path: /swagger-ui.html
   packages-to-scan:
   - cybersoft.javabackend.girajava14gv
-
+    
 gira:
   security:
     jwt:

@@ -17,6 +17,11 @@ public class AuditorAwareImpl implements AuditorAware<String> {
 		if (auth == null)
 			return Optional.ofNullable("");
 		
+		if(auth.getPrincipal() instanceof String) {
+			String principal = (String) auth.getPrincipal();
+			return Optional.ofNullable(principal);
+		}
+			
 		UserDetails user = (UserDetails)auth.getPrincipal();
 		
 		return Optional.ofNullable(user.getUsername());

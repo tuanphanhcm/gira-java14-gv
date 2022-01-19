@@ -12,3 +12,7 @@ buildNumber.properties
 .project
 .idea/workspace.xml
 .project
+.classpath
+.classpath
+.project
+*.log
