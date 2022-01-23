@@ -39,7 +39,7 @@ public class AuthServiceImpl implements AuthService {
 						dto.getUsername());
 		
 		// 2. if user is null return IncorrectLoginException
-		if (userOpt.isEmpty()) {
+		if (!userOpt.isPresent()) {
 			throw new IncorrectLoginException("Incorrect username or password.");
 		}
 		

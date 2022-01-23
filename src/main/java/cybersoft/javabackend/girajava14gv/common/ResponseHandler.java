@@ -45,4 +45,19 @@ public class ResponseHandler {
 		
 		return new ResponseEntity<Object>(map, status);
 	}
+
+	public static ResponseEntity<Object> getResponse(HttpStatus ok) {
+		Map<String, Object> map = new HashMap<String, Object>();
+		
+		map.put("content", "OK");
+		map.put("errors", "");
+		map.put("hasErrors", false);
+		map.put("pageIndex", 1);
+		map.put("pageSize", 20);
+		map.put("total", 20);
+		map.put("responseTime", LocalDateTime.now().toLocalTime());
+		map.put("httpStatus", ok.value());
+		
+		return new ResponseEntity<Object>(map, ok);
+	}
 }
