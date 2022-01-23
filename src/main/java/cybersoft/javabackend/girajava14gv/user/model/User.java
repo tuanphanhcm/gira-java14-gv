@@ -25,7 +25,7 @@ import lombok.experimental.SuperBuilder;
 @Entity
 @Table(name = "gira_user")
 public class User extends BaseEntity {
-	
+
 	@Column(name = "username", unique = true, updatable = false)
 	private String username;
 	
