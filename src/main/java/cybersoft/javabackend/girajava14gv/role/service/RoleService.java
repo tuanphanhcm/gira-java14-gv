@@ -2,6 +2,7 @@ package cybersoft.javabackend.girajava14gv.role.service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 import javax.validation.Valid;
 
@@ -17,8 +18,8 @@ public interface RoleService {
 
 	Optional<Role> findByName(String roleName);
 
-	RoleDTO updateRole(long id, UpdateRoleDTO dto);
+	RoleDTO updateRole(UUID id, UpdateRoleDTO dto);
 
-	void deleteRole(long id);
+	void deleteRole(UUID id);
 
 }

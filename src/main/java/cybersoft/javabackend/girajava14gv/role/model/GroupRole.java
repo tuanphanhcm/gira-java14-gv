@@ -22,6 +22,7 @@ import lombok.experimental.SuperBuilder;
 @Getter
 @Setter
 @SuperBuilder
+@NoArgsConstructor
 @Entity
 @Table(name = "gira_group_role")
 public class GroupRole extends BaseEntity {

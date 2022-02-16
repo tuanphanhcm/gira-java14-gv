@@ -1,6 +1,7 @@
 package cybersoft.javabackend.girajava14gv.user.service;
 
 import java.util.Optional;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -21,7 +22,7 @@ public class UserServiceImpl implements UserService {
 	private UserRepository repository;
 	
 	@Override
-	public User getUserById(long id) {
+	public User getUserById(UUID id) {
 		Optional<User> userOpt = repository.findById(id);
 		
 		if(userOpt.isPresent())

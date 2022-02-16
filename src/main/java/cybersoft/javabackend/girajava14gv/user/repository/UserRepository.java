@@ -1,6 +1,7 @@
 package cybersoft.javabackend.girajava14gv.user.repository;
 
 import java.util.Optional;
+import java.util.UUID;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -10,7 +11,7 @@ import cybersoft.javabackend.girajava14gv.security.dto.LoginDTO;
 import cybersoft.javabackend.girajava14gv.user.model.User;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface UserRepository extends JpaRepository<User, UUID> {
 
 	@Query("SELECT u FROM User u LEFT JOIN FETCH u.groups WHERE username = ?1")
 	Optional<User> findByUsername(String username);

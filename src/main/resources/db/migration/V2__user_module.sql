@@ -1,5 +1,5 @@
 create table gira_user (
-	id 							bigint,
+	id 					uuid,
 	version 				int not null,
 	created_by 			varchar(36),
 	created_at 			timestamp,
@@ -20,8 +20,8 @@ create table gira_user (
 );
 
 create table gira_group_role_user (
-	user_id 			bigint,
-	group_role_id bigint,
+	user_id uuid,
+	group_role_id uuid,
 	primary key(user_id, group_role_id)
 );
 

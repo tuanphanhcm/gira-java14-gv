@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS gira_role(
-	id bigint,
+	id uuid,
 	version int not null,
 	name varchar(255) not null UNIQUE,
 	description varchar(255) not null,
@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS gira_role(
 );
 
 CREATE TABLE IF NOT EXISTS gira_group_role(
-	id bigint,
+	id uuid,
 	version int not null,
 	name varchar(255) not null UNIQUE,
 	description varchar(255) not null,
@@ -25,8 +25,8 @@ CREATE TABLE IF NOT EXISTS gira_group_role(
 );
 
 CREATE TABLE IF NOT EXISTS gira_role_group_role(
-	role_id bigint,
-	group_role_id bigint,
+	role_id uuid,
+	group_role_id uuid,
 	primary key(role_id, group_role_id)
 );
 
